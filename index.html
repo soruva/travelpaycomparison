@@ -777,7 +777,7 @@
             ctaButton.onclick = function() {
                 window.open(best.affiliateLink, '_blank');
             };
-
+            document.getElementById('otherOptionsContainer').innerHTML = '';
             // Update other options
             let optionsHTML = '';
             for (let i = 1; i < results.length; i++) {
