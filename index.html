@@ -752,7 +752,7 @@
                 });
             }
 
-            // Sort by total cost (ascending - cheapest first)
+                // Sort by total cost (cheapest first)
             results.sort((a, b) => a.totalCost - b.totalCost);
 
             const best = results[0];
@@ -761,10 +761,16 @@
             // Update best option display
             document.getElementById('bestIcon').textContent = best.icon;
             document.getElementById('bestMethod').textContent = best.name[currentLanguage];
-            document.getElementById('previewRate').textContent = `${currencySymbol}${best.totalCost.toLocaleString(undefined, { minimumFractionDigits: (currency === 'KRW' || currency === 'TWD') ? 0 : 2 })}`;
             
-            const savings = worst.totalCost - best.totalCost;
-            document.getElementById('savingsText').textContent = `${t.youSave} ${currencySymbol}${savings.toFixed(2)}`;
+            // Format with commas and appropriate decimals
+            const formattedBestCost = best.totalCost.toLocaleString(undefined, { 
+                minimumFractionDigits: (currency === 'KRW' || currency === 'TWD') ? 0 : 2,
+                maximumFractionDigits: (currency === 'KRW' || currency === 'TWD') ? 0 : 2
+            });
+            document.getElementById('previewRate').textContent = `${currencySymbol}${formattedBestCost}`;
+            
+            const savings = (worst.totalCost - best.totalCost).toFixed(2);
+            document.getElementById('savingsText').textContent = `${t.youSave} ${currencySymbol}${savings}`;
             document.getElementById('savingsDetail').textContent = `${t.vs} ${worst.name[currentLanguage]}`;
             
             document.getElementById('detailFee').textContent = `${currencySymbol}${best.feeAmount.toFixed(2)} (${(best.fee * 100).toFixed(1)}%)`;
@@ -775,14 +781,22 @@
             const ctaButton = document.getElementById('bestCTA');
             ctaButton.textContent = best.affiliateText[currentLanguage];
             ctaButton.onclick = function() {
-                window.open(best.affiliateLink, '_blank');
+                window.open(best.affiliateLink, '_blank', 'noopener,noreferrer');
             };
-            document.getElementById('otherOptionsContainer').innerHTML = '';
-            // Update other options
+
+            // Reset and update other options
+            const otherContainer = document.getElementById('otherOptionsContainer');
+            otherContainer.innerHTML = '';
+            
             let optionsHTML = '';
             for (let i = 1; i < results.length; i++) {
                 const res = results[i];
-                const extraCost = res.totalCost - best.totalCost;
+                const extraCost = (res.totalCost - best.totalCost).toFixed(2);
+                const resCostFormatted = res.totalCost.toLocaleString(undefined, { 
+                    minimumFractionDigits: (currency === 'KRW' || currency === 'TWD') ? 0 : 2,
+                    maximumFractionDigits: (currency === 'KRW' || currency === 'TWD') ? 0 : 2
+                });
+
                 optionsHTML += `
                     <div class="option-card fade-in">
                         <div class="option-header">
@@ -790,16 +804,15 @@
                                 <span style="font-size: 20px; margin-right: 8px;">${res.icon}</span>
                                 <span class="option-name">${res.name[currentLanguage]}</span>
                             </div>
-                            <div class="option-rate">${currencySymbol}${res.totalCost.toFixed(2)}</div>
+                            <div class="option-rate">${currencySymbol}${resCostFormatted}</div>
                         </div>
                         <div class="option-details">
-                            ${t.detailFeeLabel}: ${currencySymbol}${res.feeAmount.toFixed(2)} | +${currencySymbol}${extraCost.toFixed(2)} ${t.thanBest}
+                            ${t.detailFeeLabel}: ${currencySymbol}${res.feeAmount.toFixed(2)} | +${currencySymbol}${extraCost} ${t.thanBest}
                         </div>
                     </div>
                 `;
             }
-
-            document.getElementById('otherOptionsContainer').innerHTML = optionsHTML;
+            otherContainer.innerHTML = optionsHTML;
         }
 
         // Initialize
