@@ -460,27 +460,41 @@
 
                     <button class="cta-button" id="bestCTA">Get Details →</button>
                     <div class="affiliate-note" id="affiliateNote">
-    <div style="margin-bottom: 8px;">
-        <strong>Disclaimer:</strong> Estimates for informational purposes only. Actual rates depend on your bank.
-    </div>
+                        <div style="margin-bottom: 8px;">
+                            <strong>Disclaimer:</strong> Estimates for informational purposes only. Actual rates depend on your bank.
+                        </div>
 
-    <!-- Pro Tip Box -->
-    <div style="color: #fff; background: rgba(0,0,0,0.1); padding: 8px; border-radius: 4px; margin-bottom: 12px;">
-        <strong>💡 Pro Tip:</strong> Always choose <strong>"Pay in JPY"</strong> at terminals to avoid high conversion fees.
-    </div>
+                        <!-- Pro Tip Box -->
+                        <div style="color: #fff; background: rgba(0,0,0,0.1); padding: 8px; border-radius: 4px; margin-bottom: 12px;">
+                            <strong>💡 Pro Tip:</strong> Always choose <strong>"Pay in JPY"</strong> at terminals to avoid high conversion fees.
+                        </div>
 
-    <!-- QR Apps Box -->
-    <div style="font-size: 11px; margin-bottom: 12px; padding: 5px; border-left: 2px solid rgba(255,255,255,0.3);">
-        <strong>📱 Home Apps accepted at PayPay:</strong><br>
-        KakaoPay, NaverPay(KR) | TrueMoney(TH)<br>
-        JKOPAY, PXPay+(TW) | AlipayHK(HK)
-    </div>
+                        <!-- PayPay QR Apps Box - Redesigned -->
+                        <div style="background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%); padding: 12px; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.2);">
+                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                                <span style="font-size: 20px;">📱</span>
+                                <strong style="font-size: 13px; color: #fff;">Use Your Home App at PayPay Merchants!</strong>
+                            </div>
+                            <div style="font-size: 11px; line-height: 1.6; color: rgba(255,255,255,0.9);">
+                                <div style="margin-bottom: 4px;">
+                                    <span style="opacity: 0.7;">🇰🇷 Korea:</span> <strong>KakaoPay, NaverPay</strong>
+                                </div>
+                                <div style="margin-bottom: 4px;">
+                                    <span style="opacity: 0.7;">🇹🇭 Thailand:</span> <strong>TrueMoney</strong>
+                                </div>
+                                <div style="margin-bottom: 4px;">
+                                    <span style="opacity: 0.7;">🇹🇼 Taiwan:</span> <strong>JKOPAY, PXPay+</strong>
+                                </div>
+                                <div>
+                                    <span style="opacity: 0.7;">🇭🇰 Hong Kong:</span> <strong>AlipayHK</strong>
+                                </div>
+                            </div>
+                        </div>
 
-    <p style="font-size: 0.9em; opacity: 0.8;">
-        *We recommend services that offer the best value. Some links may earn us commission.
-    </p>
-</div>
-
+                        <p style="font-size: 0.9em; opacity: 0.8;">
+                            *We recommend services that offer the best value. Some links may earn us commission.
+                        </p>
+                    </div>
                 </div>
 
                 <div class="other-options">
@@ -527,7 +541,8 @@
                 feeDisclaimer: "💡 Fees are approximate estimates based on typical market rates",
                 youPay: "You pay",
                 youSave: "You save",
-                vs: "vs"
+                vs: "vs",
+                thanBest: "more than best"
             },
             'zh-cn': {
                 title: "在日本找到最佳支付方式",
@@ -551,7 +566,8 @@
                 feeDisclaimer: "💡 手续费基于2026年4月一般市场费率的概算值",
                 youPay: "您需支付",
                 youSave: "您节省",
-                vs: "相比"
+                vs: "相比",
+                thanBest: "比最佳多"
             },
             ko: {
                 title: "일본에서 최고의 결제 방법 찾기",
@@ -575,7 +591,8 @@
                 feeDisclaimer: "💡 수수료는 2026년 4월 일반 시장 요율 기준 개략적 추정치입니다",
                 youPay: "지불 금액",
                 youSave: "절약 금액",
-                vs: "대비"
+                vs: "대비",
+                thanBest: "보다 비쌈"
             },
             th: {
                 title: "หาวิธีการชำระเงินที่ดีที่สุดในญี่ปุ่น",
@@ -599,7 +616,8 @@
                 feeDisclaimer: "💡 ค่าธรรมเนียมเป็นค่าประมาณจากอัตราตลาดทั่วไปในเดือนเมษายน 2026",
                 youPay: "คุณจ่าย",
                 youSave: "คุณประหยัด",
-                vs: "เทียบกับ"
+                vs: "เทียบกับ",
+                thanBest: "มากกว่าตัวเลือกที่ดีที่สุด"
             },
             'zh-tw': {
                 title: "在日本找到最佳付款方式",
@@ -623,7 +641,8 @@
                 feeDisclaimer: "💡 手續費基於2026年4月一般市場費率的概算值",
                 youPay: "您需支付",
                 youSave: "您節省",
-                vs: "相比"
+                vs: "相比",
+                thanBest: "比最佳多"
             }
         };
 
@@ -646,7 +665,7 @@
                 fee: 0.03,  // 3% foreign transaction fee
                 rate_markup: 0.01,  // 1% worse rate
                 available: { en: 'Most stores', 'zh-cn': '大多数商店', ko: '대부분의 가게', th: 'ร้านค้าส่วนใหญ่', 'zh-tw': '大多數商店' },
-                affiliateLink: 'https://www.revolut.com', // Revolut - Multi-currency card
+                affiliateLink: 'https://www.revolut.com',
                 affiliateText: { 
                     en: 'Get Revolut Card (No FX fees) →', 
                     'zh-cn': '获取Revolut卡（无外汇费）→', 
@@ -661,7 +680,7 @@
                 fee: 0.01,  // 1% fee at good exchange shops
                 rate_markup: 0.03,  // 3% worse rate (typical spread)
                 available: { en: 'Exchange shops', 'zh-cn': '兑换店', ko: '환전소', th: 'ร้านแลกเงิน', 'zh-tw': '兌換店' },
-                affiliateLink: 'https://wise.com', // Wise - Best exchange rates
+                affiliateLink: 'https://wise.com',
                 affiliateText: { 
                     en: 'Get cash with Wise (Best rates) →', 
                     'zh-cn': '使用Wise提取现金（最佳汇率）→', 
@@ -676,7 +695,7 @@
                 fee: 0.03,  // 3% fee (charged via credit card)
                 rate_markup: 0.015,  // 1.5% worse rate
                 available: { en: 'Trains, convenience stores', 'zh-cn': '火车、便利店', ko: '기차, 편의점', th: 'รถไฟ, ร้านสะดวกซื้อ', 'zh-tw': '火車、便利商店' },
-                affiliateLink: 'https://www.klook.com/activity/suica-card-japan/', // Klook - Buy Suica online
+                affiliateLink: 'https://www.klook.com/activity/suica-card-japan/',
                 affiliateText: { 
                     en: 'Buy Suica on Klook (Delivered to hotel) →', 
                     'zh-cn': '在Klook购买Suica（送至酒店）→', 
@@ -707,7 +726,7 @@
         function setLanguage(lang) {
             currentLanguage = lang;
             updateLanguage();
-            calculatePayment(); // Recalculate to update displayed text
+            calculatePayment();
             
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
@@ -729,8 +748,6 @@
             document.getElementById('detailFeeLabel').textContent = t.detailFeeLabel;
             document.getElementById('detailRateLabel').textContent = t.detailRateLabel;
             document.getElementById('detailAvailLabel').textContent = t.detailAvailLabel;
-            document.getElementById('bestCTA').textContent = t.bestCTA;
-            document.getElementById('affiliateNote').textContent = t.affiliateNote;
             document.getElementById('otherOptionsLabel').textContent = t.otherOptionsLabel;
             document.getElementById('dataPrivacy').textContent = t.dataPrivacy;
             document.getElementById('trustSignals').textContent = t.trustSignals;
@@ -746,20 +763,15 @@
         function calculatePayment() {
             const jpyAmount = parseFloat(document.getElementById('amount').value) || 10000;
             const currency = document.getElementById('currency').value;
-            const baseRate = exchangeRates[currency] || 151;
+            const baseRate = exchangeRates[currency] || 160;
             const currencySymbol = getCurrencySymbol(currency);
             const t = translations[currentLanguage];
 
             const results = [];
             
             for (const [key, method] of Object.entries(paymentMethods)) {
-                // Calculate effective exchange rate (worse than base rate)
                 const effectiveRate = baseRate * (1 - method.rate_markup);
-                
-                // Convert JPY to foreign currency
                 const foreignCurrencyBase = jpyAmount / effectiveRate;
-                
-                // Add fee
                 const totalCost = foreignCurrencyBase * (1 + method.fee);
                 
                 results.push({
@@ -771,17 +783,14 @@
                 });
             }
 
-                // Sort by total cost (cheapest first)
             results.sort((a, b) => a.totalCost - b.totalCost);
 
             const best = results[0];
             const worst = results[results.length - 1];
 
-            // Update best option display
             document.getElementById('bestIcon').textContent = best.icon;
             document.getElementById('bestMethod').textContent = best.name[currentLanguage];
             
-            // Format with commas and appropriate decimals
             const formattedBestCost = best.totalCost.toLocaleString(undefined, { 
                 minimumFractionDigits: (currency === 'KRW' || currency === 'TWD') ? 0 : 2,
                 maximumFractionDigits: (currency === 'KRW' || currency === 'TWD') ? 0 : 2
@@ -796,18 +805,15 @@
             document.getElementById('detailRate').textContent = `1 ${currency} = ¥${baseRate.toFixed(2)}`;
             document.getElementById('detailAvail').textContent = best.available[currentLanguage];
             
-            // Update CTA button with affiliate link
             const ctaButton = document.getElementById('bestCTA');
             ctaButton.textContent = best.affiliateText[currentLanguage];
             ctaButton.onclick = function() {
                 window.open(best.affiliateLink, '_blank', 'noopener,noreferrer');
             };
 
-            // Reset and update other options
             const otherContainer = document.getElementById('otherOptionsContainer');
-            otherContainer.innerHTML = '';
-            
             let optionsHTML = '';
+            
             for (let i = 1; i < results.length; i++) {
                 const res = results[i];
                 const extraCost = (res.totalCost - best.totalCost).toFixed(2);
@@ -832,7 +838,12 @@
                 `;
             }
             otherContainer.innerHTML = optionsHTML;
-            document.getElementById('results-preview').scrollIntoView({ behavior: 'smooth' });
+            
+            // Smooth scroll to results
+            const resultsPreview = document.querySelector('.results-preview');
+            if (resultsPreview) {
+                resultsPreview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
         }
 
         // Initialize
