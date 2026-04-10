@@ -462,7 +462,7 @@
                     </div>
                 </div>
 
-                <button class="calculate-btn" onclick="calculatePayment()" id="calculateBtn">Compare Now →</button>
+                <button class="calculate-btn" onclick="calculateAndScroll()" id="calculateBtn">Compare Now →</button>
 
                 <div class="trust-signals" id="trustSignals">
                     🔒 Your data is not stored | Rates based on April 2026 estimates
@@ -753,7 +753,7 @@
         function getCurrencySymbol(currency) {
             const symbols = {
                 USD: '$',
-                CNY: '¥',
+                CNY: 'CN¥',
                 KRW: '₩',
                 THB: '฿',
                 TWD: 'NT$',
@@ -879,7 +879,12 @@
                 `;
             }
             otherContainer.innerHTML = optionsHTML;
+        }
+
+        function calculateAndScroll() {
+            calculatePayment();
             
+            // Only scroll when button is clicked
             const resultsPreview = document.querySelector('.results-preview');
             if (resultsPreview) {
                 resultsPreview.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
