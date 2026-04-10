@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - TravelPayComparison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #00cc66 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            border-color: #0066cc;
+            color: #0066cc;
+        }
+
+        .lang-btn.active {
+            background: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        ul {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .highlight {
+            background: #e8f4f8;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: #0066cc;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">TravelPayComparison</div>
+            <a href="index.html" class="back-link">← Back to Calculator</a>
+            
+            <div class="lang-selector">
+                <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                <button class="lang-btn" onclick="setLanguage('zh-cn')">简体中文</button>
+                <button class="lang-btn" onclick="setLanguage('ko')">한국어</button>
+                <button class="lang-btn" onclick="setLanguage('th')">ไทย</button>
+                <button class="lang-btn" onclick="setLanguage('zh-tw')">繁體中文</button>
+            </div>
+        </header>
+
+        <main id="content">
+            <h1 id="pageTitle">Privacy Policy</h1>
+            <p class="last-updated" id="lastUpdated">Last updated: April 10, 2026</p>
+
+            <div class="highlight">
+                <p id="tldr">TL;DR: We don't collect or store any personal information. This calculator runs entirely in your browser.</p>
+            </div>
+
+            <h2 id="section1Title">Information We Collect</h2>
+            <p id="section1Text">We do not collect, store, or process any personal information. All calculations are performed locally in your web browser.</p>
+
+            <h2 id="section2Title">Cookies and Tracking</h2>
+            <p id="section2Text">We do not use cookies or tracking technologies. We do not track your browsing behavior or create user profiles.</p>
+
+            <h2 id="section3Title">Affiliate Links</h2>
+            <p id="section3Text">This website contains affiliate links to third-party services (Wise, Revolut, Klook, Booking.com, etc.). When you click these links and make a purchase, we may earn a commission at no extra cost to you. These third-party services have their own privacy policies.</p>
+
+            <h2 id="section4Title">Third-Party Services</h2>
+            <p id="section4Text">We use the following third-party services:</p>
+            <ul id="section4List">
+                <li>Google Fonts - for typography</li>
+                <li>Affiliate networks - for monetization</li>
+            </ul>
+            <p id="section4Text2">These services may collect data according to their own privacy policies.</p>
+
+            <h2 id="section5Title">Your Rights</h2>
+            <p id="section5Text">Since we don't collect any personal data, there is no data to access, delete, or modify. All calculations remain on your device.</p>
+
+            <h2 id="section6Title">Changes to This Policy</h2>
+            <p id="section6Text">We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date.</p>
+
+            <h2 id="section7Title">Contact</h2>
+            <p id="section7Text">If you have questions about this privacy policy, please contact us at: privacy@travelpaycomparison.com</p>
+        </main>
+
+        <footer>
+            <p>© 2024 TravelPayComparison</p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "Privacy Policy",
+                lastUpdated: "Last updated: April 10, 2026",
+                tldr: "TL;DR: We don't collect or store any personal information. This calculator runs entirely in your browser.",
+                section1Title: "Information We Collect",
+                section1Text: "We do not collect, store, or process any personal information. All calculations are performed locally in your web browser.",
+                section2Title: "Cookies and Tracking",
+                section2Text: "We do not use cookies or tracking technologies. We do not track your browsing behavior or create user profiles.",
+                section3Title: "Affiliate Links",
+                section3Text: "This website contains affiliate links to third-party services (Wise, Revolut, Klook, Booking.com, etc.). When you click these links and make a purchase, we may earn a commission at no extra cost to you. These third-party services have their own privacy policies.",
+                section4Title: "Third-Party Services",
+                section4Text: "We use the following third-party services:",
+                section4List: ["Google Fonts - for typography", "Affiliate networks - for monetization"],
+                section4Text2: "These services may collect data according to their own privacy policies.",
+                section5Title: "Your Rights",
+                section5Text: "Since we don't collect any personal data, there is no data to access, delete, or modify. All calculations remain on your device.",
+                section6Title: "Changes to This Policy",
+                section6Text: "We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date.",
+                section7Title: "Contact",
+                section7Text: "If you have questions about this privacy policy, please contact us at: privacy@travelpaycomparison.com"
+            },
+            'zh-cn': {
+                pageTitle: "隐私政策",
+                lastUpdated: "最后更新：2026年4月10日",
+                tldr: "简而言之：我们不收集或存储任何个人信息。此计算器完全在您的浏览器中运行。",
+                section1Title: "我们收集的信息",
+                section1Text: "我们不收集、存储或处理任何个人信息。所有计算均在您的网络浏览器中本地执行。",
+                section2Title: "Cookie和跟踪",
+                section2Text: "我们不使用Cookie或跟踪技术。我们不跟踪您的浏览行为或创建用户配置文件。",
+                section3Title: "联盟链接",
+                section3Text: "本网站包含第三方服务（Wise、Revolut、Klook、Booking.com等）的联盟链接。当您点击这些链接并购买时，我们可能会获得佣金，但不会增加您的费用。这些第三方服务有自己的隐私政策。",
+                section4Title: "第三方服务",
+                section4Text: "我们使用以下第三方服务：",
+                section4List: ["Google Fonts - 用于字体", "联盟网络 - 用于变现"],
+                section4Text2: "这些服务可能根据其自己的隐私政策收集数据。",
+                section5Title: "您的权利",
+                section5Text: "由于我们不收集任何个人数据，因此没有数据需要访问、删除或修改。所有计算都保留在您的设备上。",
+                section6Title: "政策变更",
+                section6Text: "我们可能会不时更新此隐私政策。任何更改都将发布在此页面上并附上更新日期。",
+                section7Title: "联系方式",
+                section7Text: "如果您对此隐私政策有疑问，请通过以下方式联系我们：privacy@travelpaycomparison.com"
+            },
+            ko: {
+                pageTitle: "개인정보 보호정책",
+                lastUpdated: "최종 업데이트: 2026년 4월 10일",
+                tldr: "요약: 개인정보를 수집하거나 저장하지 않습니다. 이 계산기는 브라우저에서 완전히 실행됩니다.",
+                section1Title: "수집하는 정보",
+                section1Text: "개인정보를 수집, 저장 또는 처리하지 않습니다. 모든 계산은 웹 브라우저에서 로컬로 수행됩니다.",
+                section2Title: "쿠키 및 추적",
+                section2Text: "쿠키나 추적 기술을 사용하지 않습니다. 브라우징 행동을 추적하거나 사용자 프로필을 생성하지 않습니다.",
+                section3Title: "제휴 링크",
+                section3Text: "이 웹사이트에는 제3자 서비스(Wise, Revolut, Klook, Booking.com 등)에 대한 제휴 링크가 포함되어 있습니다. 이러한 링크를 클릭하고 구매하면 추가 비용 없이 수수료를 받을 수 있습니다. 이러한 제3자 서비스에는 자체 개인정보 보호정책이 있습니다.",
+                section4Title: "제3자 서비스",
+                section4Text: "다음 제3자 서비스를 사용합니다:",
+                section4List: ["Google Fonts - 타이포그래피용", "제휴 네트워크 - 수익화용"],
+                section4Text2: "이러한 서비스는 자체 개인정보 보호정책에 따라 데이터를 수집할 수 있습니다.",
+                section5Title: "귀하의 권리",
+                section5Text: "개인 데이터를 수집하지 않으므로 액세스, 삭제 또는 수정할 데이터가 없습니다. 모든 계산은 기기에 남아 있습니다.",
+                section6Title: "정책 변경",
+                section6Text: "이 개인정보 보호정책을 수시로 업데이트할 수 있습니다. 변경 사항은 업데이트된 날짜와 함께 이 페이지에 게시됩니다.",
+                section7Title: "연락처",
+                section7Text: "이 개인정보 보호정책에 대한 질문이 있으시면 다음으로 문의하십시오: privacy@travelpaycomparison.com"
+            },
+            th: {
+                pageTitle: "นโยบายความเป็นส่วนตัว",
+                lastUpdated: "อัปเดตล่าสุด: 10 เมษายน 2026",
+                tldr: "สรุป: เราไม่เก็บรวบรวมหรือจัดเก็บข้อมูลส่วนบุคคลใดๆ เครื่องคิดเลขนี้ทำงานทั้งหมดในเบราว์เซอร์ของคุณ",
+                section1Title: "ข้อมูลที่เราเก็บรวบรวม",
+                section1Text: "เราไม่เก็บรวบรวม จัดเก็บ หรือประมวลผลข้อมูลส่วนบุคคลใดๆ การคำนวณทั้งหมดดำเนินการในเบราว์เซอร์ของคุณ",
+                section2Title: "คุกกี้และการติดตาม",
+                section2Text: "เราไม่ใช้คุกกี้หรือเทคโนโลยีการติดตาม เราไม่ติดตามพฤติกรรมการเข้าชมของคุณหรือสร้างโปรไฟล์ผู้ใช้",
+                section3Title: "ลิงก์พันธมิตร",
+                section3Text: "เว็บไซต์นี้มีลิงก์พันธมิตรไปยังบริการของบุคคลที่สาม (Wise, Revolut, Klook, Booking.com ฯลฯ) เมื่อคุณคลิกลิงก์เหล่านี้และทำการซื้อ เราอาจได้รับค่าคอมมิชชันโดยไม่มีค่าใช้จ่ายเพิ่มเติมสำหรับคุณ บริการของบุคคลที่สามเหล่านี้มีนโยบายความเป็นส่วนตัวของตนเอง",
+                section4Title: "บริการของบุคคลที่สาม",
+                section4Text: "เราใช้บริการของบุคคลที่สามต่อไปนี้:",
+                section4List: ["Google Fonts - สำหรับการพิมพ์", "เครือข่ายพันธมิตร - สำหรับการสร้างรายได้"],
+                section4Text2: "บริการเหล่านี้อาจเก็บรวบรวมข้อมูลตามนโยบายความเป็นส่วนตัวของตนเอง",
+                section5Title: "สิทธิของคุณ",
+                section5Text: "เนื่องจากเราไม่เก็บรวบรวมข้อมูลส่วนบุคคลใดๆ จึงไม่มีข้อมูลให้เข้าถึง ลบ หรือแก้ไข การคำนวณทั้งหมดยังคงอยู่ในอุปกรณ์ของคุณ",
+                section6Title: "การเปลี่ยนแปลงนโยบาย",
+                section6Text: "เราอาจอัปเดตนโยบายความเป็นส่วนตัวนี้เป็นครั้งคราว การเปลี่ยนแปลงใดๆ จะถูกโพสต์บนหน้านี้พร้อมวันที่อัปเดต",
+                section7Title: "ติดต่อ",
+                section7Text: "หากคุณมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวนี้ โปรดติดต่อเราที่: privacy@travelpaycomparison.com"
+            },
+            'zh-tw': {
+                pageTitle: "隱私政策",
+                lastUpdated: "最後更新：2026年4月10日",
+                tldr: "簡而言之：我們不收集或儲存任何個人資訊。此計算器完全在您的瀏覽器中運行。",
+                section1Title: "我們收集的資訊",
+                section1Text: "我們不收集、儲存或處理任何個人資訊。所有計算均在您的網路瀏覽器中本地執行。",
+                section2Title: "Cookie和追蹤",
+                section2Text: "我們不使用Cookie或追蹤技術。我們不追蹤您的瀏覽行為或建立使用者設定檔。",
+                section3Title: "聯盟連結",
+                section3Text: "本網站包含第三方服務（Wise、Revolut、Klook、Booking.com等）的聯盟連結。當您點擊這些連結並購買時，我們可能會獲得佣金，但不會增加您的費用。這些第三方服務有自己的隱私政策。",
+                section4Title: "第三方服務",
+                section4Text: "我們使用以下第三方服務：",
+                section4List: ["Google Fonts - 用於字型", "聯盟網路 - 用於變現"],
+                section4Text2: "這些服務可能根據其自己的隱私政策收集資料。",
+                section5Title: "您的權利",
+                section5Text: "由於我們不收集任何個人資料，因此沒有資料需要存取、刪除或修改。所有計算都保留在您的裝置上。",
+                section6Title: "政策變更",
+                section6Text: "我們可能會不時更新此隱私政策。任何變更都將發佈在此頁面上並附上更新日期。",
+                section7Title: "聯絡方式",
+                section7Text: "如果您對此隱私政策有疑問，請透過以下方式聯絡我們：privacy@travelpaycomparison.com"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            updateContent();
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function updateContent() {
+            const t = translations[currentLanguage];
+            
+            document.getElementById('pageTitle').textContent = t.pageTitle;
+            document.getElementById('lastUpdated').textContent = t.lastUpdated;
+            document.getElementById('tldr').textContent = t.tldr;
+            document.getElementById('section1Title').textContent = t.section1Title;
+            document.getElementById('section1Text').textContent = t.section1Text;
+            document.getElementById('section2Title').textContent = t.section2Title;
+            document.getElementById('section2Text').textContent = t.section2Text;
+            document.getElementById('section3Title').textContent = t.section3Title;
+            document.getElementById('section3Text').textContent = t.section3Text;
+            document.getElementById('section4Title').textContent = t.section4Title;
+            document.getElementById('section4Text').textContent = t.section4Text;
+            
+            const list = document.getElementById('section4List');
+            list.innerHTML = '';
+            t.section4List.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = item;
+                list.appendChild(li);
+            });
+            
+            document.getElementById('section4Text2').textContent = t.section4Text2;
+            document.getElementById('section5Title').textContent = t.section5Title;
+            document.getElementById('section5Text').textContent = t.section5Text;
+            document.getElementById('section6Title').textContent = t.section6Title;
+            document.getElementById('section6Text').textContent = t.section6Text;
+            document.getElementById('section7Title').textContent = t.section7Title;
+            document.getElementById('section7Text').textContent = t.section7Text;
+        }
+    </script>
+</body>
+</html>
