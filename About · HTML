@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TravelPayComparison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #00cc66 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            border-color: #0066cc;
+            color: #0066cc;
+        }
+
+        .lang-btn.active {
+            background: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: #e8f4f8;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: #0066cc;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">TravelPayComparison</div>
+            <a href="index.html" class="back-link">← Back to Calculator</a>
+            
+            <div class="lang-selector">
+                <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                <button class="lang-btn" onclick="setLanguage('zh-cn')">简体中文</button>
+                <button class="lang-btn" onclick="setLanguage('ko')">한국어</button>
+                <button class="lang-btn" onclick="setLanguage('th')">ไทย</button>
+                <button class="lang-btn" onclick="setLanguage('zh-tw')">繁體中文</button>
+            </div>
+        </header>
+
+        <main id="content">
+            <h1 id="pageTitle">About TravelPayComparison</h1>
+
+            <div class="highlight">
+                <p id="mission">💡 Our mission: Help travelers save money in Japan by making smart payment choices.</p>
+            </div>
+
+            <h2 id="section1Title">What We Do</h2>
+            <p id="section1Text">TravelPayComparison is a free calculator that helps you compare payment methods when traveling in Japan. We calculate the actual cost of using cash, credit cards, or IC cards (like Suica), including hidden fees and exchange rate markups.</p>
+
+            <h2 id="section2Title">Why We Built This</h2>
+            <p id="section2Text">Traveling in Japan is amazing, but payment options can be confusing. Should you use cash? Credit card? Suica? Each method has different fees and exchange rates. We created this tool to make the decision simple and help you save money.</p>
+
+            <h2 id="section3Title">How It Works</h2>
+            <p id="section3Text">Enter the amount in Japanese Yen you want to spend, select your home currency, and we'll show you the real cost of each payment method. Our calculator includes typical fees for cash exchange (3%), credit card foreign transaction fees (3%), and IC card markups (1.5%).</p>
+
+            <h2 id="section4Title">Our Recommendations</h2>
+            <p id="section4Text">We recommend payment services like Wise, Revolut, and Klook based on their value to travelers. We earn commissions from affiliate links, but this doesn't affect the calculator results or our recommendations. We only recommend services we believe provide real value.</p>
+
+            <h2 id="section5Title">Data Sources</h2>
+            <p id="section5Text">Exchange rates are based on mid-market rates as of April 2026. Fees are typical market rates and may vary by provider. Always verify current rates with your payment provider before making financial decisions.</p>
+
+            <h2 id="section6Title">Feedback</h2>
+            <p id="section6Text">We're constantly improving this tool. If you have suggestions, questions, or feedback, please contact us at: hello@travelpaycomparison.com</p>
+
+            <div class="highlight" style="margin-top: 30px;">
+                <p id="thankyou">Thank you for using TravelPayComparison. Have a great trip to Japan! 🇯🇵</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>© 2024 TravelPayComparison</p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "About TravelPayComparison",
+                mission: "💡 Our mission: Help travelers save money in Japan by making smart payment choices.",
+                section1Title: "What We Do",
+                section1Text: "TravelPayComparison is a free calculator that helps you compare payment methods when traveling in Japan. We calculate the actual cost of using cash, credit cards, or IC cards (like Suica), including hidden fees and exchange rate markups.",
+                section2Title: "Why We Built This",
+                section2Text: "Traveling in Japan is amazing, but payment options can be confusing. Should you use cash? Credit card? Suica? Each method has different fees and exchange rates. We created this tool to make the decision simple and help you save money.",
+                section3Title: "How It Works",
+                section3Text: "Enter the amount in Japanese Yen you want to spend, select your home currency, and we'll show you the real cost of each payment method. Our calculator includes typical fees for cash exchange (3%), credit card foreign transaction fees (3%), and IC card markups (1.5%).",
+                section4Title: "Our Recommendations",
+                section4Text: "We recommend payment services like Wise, Revolut, and Klook based on their value to travelers. We earn commissions from affiliate links, but this doesn't affect the calculator results or our recommendations. We only recommend services we believe provide real value.",
+                section5Title: "Data Sources",
+                section5Text: "Exchange rates are based on mid-market rates as of April 2026. Fees are typical market rates and may vary by provider. Always verify current rates with your payment provider before making financial decisions.",
+                section6Title: "Feedback",
+                section6Text: "We're constantly improving this tool. If you have suggestions, questions, or feedback, please contact us at: hello@travelpaycomparison.com",
+                thankyou: "Thank you for using TravelPayComparison. Have a great trip to Japan! 🇯🇵"
+            },
+            'zh-cn': {
+                pageTitle: "关于 TravelPayComparison",
+                mission: "💡 我们的使命：通过明智的支付选择帮助旅行者在日本省钱。",
+                section1Title: "我们做什么",
+                section1Text: "TravelPayComparison是一个免费计算器，可帮助您在日本旅行时比较支付方式。我们计算使用现金、信用卡或IC卡（如Suica）的实际成本，包括隐藏费用和汇率加价。",
+                section2Title: "为什么创建这个工具",
+                section2Text: "在日本旅行很棒，但支付选项可能令人困惑。应该使用现金？信用卡？Suica？每种方式都有不同的费用和汇率。我们创建此工具是为了简化决策并帮助您省钱。",
+                section3Title: "如何运作",
+                section3Text: "输入您要花费的日元金额，选择您的本国货币，我们将向您显示每种支付方式的实际成本。我们的计算器包括现金兑换（3%）、信用卡外汇交易费（3%）和IC卡加价（1.5%）的典型费用。",
+                section4Title: "我们的推荐",
+                section4Text: "我们根据旅行者的价值推荐Wise、Revolut和Klook等支付服务。我们从联盟链接中赚取佣金，但这不影响计算器结果或我们的推荐。我们只推荐我们认为提供真正价值的服务。",
+                section5Title: "数据来源",
+                section5Text: "汇率基于2026年4月的市场中间价。费用是典型的市场费率，可能因提供商而异。在做出财务决策之前，请务必与您的支付提供商核实当前费率。",
+                section6Title: "反馈",
+                section6Text: "我们不断改进此工具。如果您有建议、问题或反馈，请通过以下方式联系我们：hello@travelpaycomparison.com",
+                thankyou: "感谢您使用TravelPayComparison。祝您日本之旅愉快！🇯🇵"
+            },
+            ko: {
+                pageTitle: "TravelPayComparison 소개",
+                mission: "💡 우리의 사명: 현명한 결제 선택으로 일본 여행자의 비용 절감을 돕습니다.",
+                section1Title: "우리가 하는 일",
+                section1Text: "TravelPayComparison은 일본 여행 시 결제 수단을 비교할 수 있는 무료 계산기입니다. 숨겨진 수수료와 환율 마크업을 포함하여 현금, 신용카드 또는 IC 카드(Suica 등) 사용의 실제 비용을 계산합니다.",
+                section2Title: "왜 만들었나요",
+                section2Text: "일본 여행은 멋지지만 결제 옵션은 혼란스러울 수 있습니다. 현금을 사용해야 할까요? 신용카드? Suica? 각 방법마다 수수료와 환율이 다릅니다. 결정을 간단하게 하고 비용을 절약할 수 있도록 이 도구를 만들었습니다.",
+                section3Title: "작동 방식",
+                section3Text: "사용하려는 일본 엔화 금액을 입력하고 본국 통화를 선택하면 각 결제 수단의 실제 비용을 보여드립니다. 계산기에는 현금 환전(3%), 신용카드 해외 거래 수수료(3%), IC 카드 마크업(1.5%)에 대한 일반적인 수수료가 포함됩니다.",
+                section4Title: "우리의 추천",
+                section4Text: "여행자에게 가치를 제공한다고 판단되는 Wise, Revolut, Klook과 같은 결제 서비스를 추천합니다. 제휴 링크에서 수수료를 받지만 이것이 계산기 결과나 추천에 영향을 미치지 않습니다. 실제 가치를 제공한다고 믿는 서비스만 추천합니다.",
+                section5Title: "데이터 출처",
+                section5Text: "환율은 2026년 4월 기준 중간 시장 환율을 기반으로 합니다. 수수료는 일반적인 시장 요율이며 제공업체에 따라 다를 수 있습니다. 재정 결정을 내리기 전에 항상 결제 제공업체에 현재 요율을 확인하십시오.",
+                section6Title: "피드백",
+                section6Text: "이 도구를 지속적으로 개선하고 있습니다. 제안, 질문 또는 피드백이 있으시면 다음으로 문의하십시오: hello@travelpaycomparison.com",
+                thankyou: "TravelPayComparison을 이용해 주셔서 감사합니다. 즐거운 일본 여행 되세요! 🇯🇵"
+            },
+            th: {
+                pageTitle: "เกี่ยวกับ TravelPayComparison",
+                mission: "💡 ภารกิจของเรา: ช่วยนักท่องเที่ยวประหยัดเงินในญี่ปุ่นโดยการเลือกการชำระเงินอย่างชาญฉลาด",
+                section1Title: "เราทำอะไร",
+                section1Text: "TravelPayComparison เป็นเครื่องคิดเลขฟรีที่ช่วยคุณเปรียบเทียบวิธีการชำระเงินเมื่อเดินทางในญี่ปุ่น เราคำนวณต้นทุนจริงของการใช้เงินสด บัตรเครดิต หรือบัตร IC (เช่น Suica) รวมถึงค่าธรรมเนียมที่ซ่อนอยู่และอัตราแลกเปลี่ยนที่เพิ่มขึ้น",
+                section2Title: "ทำไมเราถึงสร้างสิ่งนี้",
+                section2Text: "การเดินทางในญี่ปุ่นน่าทึ่ง แต่ตัวเลือกการชำระเงินอาจสับสน ควรใช้เงินสด? บัตรเครดิต? Suica? แต่ละวิธีมีค่าธรรมเนียมและอัตราแลกเปลี่ยนที่แตกต่างกัน เราสร้างเครื่องมือนี้เพื่อทำให้การตัดสินใจง่ายและช่วยคุณประหยัดเงิน",
+                section3Title: "วิธีการทำงาน",
+                section3Text: "ป้อนจำนวนเงินเยนญี่ปุ่นที่คุณต้องการใช้ เลือกสกุลเงินของประเทศของคุณ และเราจะแสดงต้นทุนจริงของแต่ละวิธีการชำระเงิน เครื่องคิดเลขของเรารวมค่าธรรมเนียมทั่วไปสำหรับการแลกเปลี่ยนเงินสด (3%) ค่าธรรมเนียมธุรกรรมต่างประเทศของบัตรเครดิต (3%) และอัตราเพิ่มของบัตร IC (1.5%)",
+                section4Title: "คำแนะนำของเรา",
+                section4Text: "เราแนะนำบริการการชำระเงินเช่น Wise, Revolut และ Klook ตามคุณค่าสำหรับนักท่องเที่ยว เราได้รับค่าคอมมิชชันจากลิงก์พันธมิตร แต่สิ่งนี้ไม่ส่งผลกระทบต่อผลลัพธ์ของเครื่องคิดเลขหรือคำแนะนำของเรา เราแนะนำเฉพาะบริการที่เราเชื่อว่าให้คุณค่าที่แท้จริง",
+                section5Title: "แหล่งข้อมูล",
+                section5Text: "อัตราแลกเปลี่ยนอิงตามอัตราตลาดกลางตั้งแต่เมษายน 2026 ค่าธรรมเนียมเป็นอัตราตลาดทั่วไปและอาจแตกต่างกันไปตามผู้ให้บริการ โปรดตรวจสอบอัตราปัจจุบันกับผู้ให้บริการการชำระเงินของคุณเสมอก่อนตัดสินใจทางการเงิน",
+                section6Title: "คำติชม",
+                section6Text: "เรากำลังปรับปรุงเครื่องมือนี้อย่างต่อเนื่อง หากคุณมีข้อเสนอแนะ คำถาม หรือคำติชม โปรดติดต่อเราที่: hello@travelpaycomparison.com",
+                thankyou: "ขอบคุณที่ใช้ TravelPayComparison มีความสุขในการเดินทางไปญี่ปุ่น! 🇯🇵"
+            },
+            'zh-tw': {
+                pageTitle: "關於 TravelPayComparison",
+                mission: "💡 我們的使命：透過明智的支付選擇幫助旅行者在日本省錢。",
+                section1Title: "我們做什麼",
+                section1Text: "TravelPayComparison是一個免費計算器，可幫助您在日本旅行時比較支付方式。我們計算使用現金、信用卡或IC卡（如Suica）的實際成本，包括隱藏費用和匯率加價。",
+                section2Title: "為什麼建立這個工具",
+                section2Text: "在日本旅行很棒，但支付選項可能令人困惑。應該使用現金？信用卡？Suica？每種方式都有不同的費用和匯率。我們建立此工具是為了簡化決策並幫助您省錢。",
+                section3Title: "如何運作",
+                section3Text: "輸入您要花費的日圓金額，選擇您的本國貨幣，我們將向您顯示每種支付方式的實際成本。我們的計算器包括現金兌換（3%）、信用卡外匯交易費（3%）和IC卡加價（1.5%）的典型費用。",
+                section4Title: "我們的推薦",
+                section4Text: "我們根據旅行者的價值推薦Wise、Revolut和Klook等支付服務。我們從聯盟連結中賺取佣金，但這不影響計算器結果或我們的推薦。我們只推薦我們認為提供真正價值的服務。",
+                section5Title: "資料來源",
+                section5Text: "匯率基於2026年4月的市場中間價。費用是典型的市場費率，可能因提供商而異。在做出財務決策之前，請務必與您的支付提供商核實當前費率。",
+                section6Title: "回饋",
+                section6Text: "我們不斷改進此工具。如果您有建議、問題或回饋，請透過以下方式聯絡我們：hello@travelpaycomparison.com",
+                thankyou: "感謝您使用TravelPayComparison。祝您日本之旅愉快！🇯🇵"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            updateContent();
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function updateContent() {
+            const t = translations[currentLanguage];
+            
+            document.getElementById('pageTitle').textContent = t.pageTitle;
+            document.getElementById('mission').textContent = t.mission;
+            document.getElementById('section1Title').textContent = t.section1Title;
+            document.getElementById('section1Text').textContent = t.section1Text;
+            document.getElementById('section2Title').textContent = t.section2Title;
+            document.getElementById('section2Text').textContent = t.section2Text;
+            document.getElementById('section3Title').textContent = t.section3Title;
+            document.getElementById('section3Text').textContent = t.section3Text;
+            document.getElementById('section4Title').textContent = t.section4Title;
+            document.getElementById('section4Text').textContent = t.section4Text;
+            document.getElementById('section5Title').textContent = t.section5Title;
+            document.getElementById('section5Text').textContent = t.section5Text;
+            document.getElementById('section6Title').textContent = t.section6Title;
+            document.getElementById('section6Text').textContent = t.section6Text;
+            document.getElementById('thankyou').textContent = t.thankyou;
+        }
+    </script>
+</body>
+</html>
