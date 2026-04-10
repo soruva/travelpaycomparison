@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - TravelPayComparison</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #00cc66 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        .lang-selector {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: 2px solid #ddd;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 12px;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            border-color: #0066cc;
+            color: #0066cc;
+        }
+
+        .lang-btn.active {
+            background: #0066cc;
+            color: white;
+            border-color: #0066cc;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 900;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .last-updated {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 800;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            border-left: 4px solid #ffaa00;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: #856404;
+            font-weight: 600;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #f0f0f0;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">TravelPayComparison</div>
+            <a href="index.html" class="back-link">← Back to Calculator</a>
+            
+            <div class="lang-selector">
+                <button class="lang-btn active" onclick="setLanguage('en')">English</button>
+                <button class="lang-btn" onclick="setLanguage('zh-cn')">简体中文</button>
+                <button class="lang-btn" onclick="setLanguage('ko')">한국어</button>
+                <button class="lang-btn" onclick="setLanguage('th')">ไทย</button>
+                <button class="lang-btn" onclick="setLanguage('zh-tw')">繁體中文</button>
+            </div>
+        </header>
+
+        <main id="content">
+            <h1 id="pageTitle">Terms of Service</h1>
+            <p class="last-updated" id="lastUpdated">Last updated: April 10, 2026</p>
+
+            <div class="highlight">
+                <p id="disclaimer">⚠️ This tool provides estimates only. Actual fees and exchange rates may vary. Always verify with your payment provider.</p>
+            </div>
+
+            <h2 id="section1Title">1. Service Description</h2>
+            <p id="section1Text">TravelPayComparison is a free comparison calculator for payment methods in Japan. We provide estimated costs based on typical market rates. This is an informational tool only and not financial advice.</p>
+
+            <h2 id="section2Title">2. No Guarantees</h2>
+            <p id="section2Text">We make no guarantees about the accuracy, completeness, or reliability of the information provided. Exchange rates and fees change frequently. You should always verify current rates with your payment provider before making financial decisions.</p>
+
+            <h2 id="section3Title">3. Affiliate Relationships</h2>
+            <p id="section3Text">We earn commissions from affiliate links to Wise, Revolut, Klook, Booking.com, and other services. This does not affect the price you pay. We only recommend services we believe provide value to travelers.</p>
+
+            <h2 id="section4Title">4. No Liability</h2>
+            <p id="section4Text">We are not responsible for any losses, damages, or expenses arising from your use of this calculator or decisions made based on the information provided. Use this tool at your own risk.</p>
+
+            <h2 id="section5Title">5. Third-Party Services</h2>
+            <p id="section5Text">Links to third-party websites are provided for your convenience. We are not responsible for their content, services, or privacy practices. Review their terms and policies before using their services.</p>
+
+            <h2 id="section6Title">6. Changes to Service</h2>
+            <p id="section6Text">We reserve the right to modify, suspend, or discontinue this service at any time without notice. We may also update these terms at any time. Continued use constitutes acceptance of updated terms.</p>
+
+            <h2 id="section7Title">7. User Conduct</h2>
+            <p id="section7Text">You agree not to misuse this service, attempt to access restricted areas, or interfere with its operation. We reserve the right to block access for violations.</p>
+
+            <h2 id="section8Title">8. Contact</h2>
+            <p id="section8Text">Questions about these terms? Contact us at: legal@travelpaycomparison.com</p>
+        </main>
+
+        <footer>
+            <p>© 2024 TravelPayComparison</p>
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                pageTitle: "Terms of Service",
+                lastUpdated: "Last updated: April 10, 2026",
+                disclaimer: "⚠️ This tool provides estimates only. Actual fees and exchange rates may vary. Always verify with your payment provider.",
+                section1Title: "1. Service Description",
+                section1Text: "TravelPayComparison is a free comparison calculator for payment methods in Japan. We provide estimated costs based on typical market rates. This is an informational tool only and not financial advice.",
+                section2Title: "2. No Guarantees",
+                section2Text: "We make no guarantees about the accuracy, completeness, or reliability of the information provided. Exchange rates and fees change frequently. You should always verify current rates with your payment provider before making financial decisions.",
+                section3Title: "3. Affiliate Relationships",
+                section3Text: "We earn commissions from affiliate links to Wise, Revolut, Klook, Booking.com, and other services. This does not affect the price you pay. We only recommend services we believe provide value to travelers.",
+                section4Title: "4. No Liability",
+                section4Text: "We are not responsible for any losses, damages, or expenses arising from your use of this calculator or decisions made based on the information provided. Use this tool at your own risk.",
+                section5Title: "5. Third-Party Services",
+                section5Text: "Links to third-party websites are provided for your convenience. We are not responsible for their content, services, or privacy practices. Review their terms and policies before using their services.",
+                section6Title: "6. Changes to Service",
+                section6Text: "We reserve the right to modify, suspend, or discontinue this service at any time without notice. We may also update these terms at any time. Continued use constitutes acceptance of updated terms.",
+                section7Title: "7. User Conduct",
+                section7Text: "You agree not to misuse this service, attempt to access restricted areas, or interfere with its operation. We reserve the right to block access for violations.",
+                section8Title: "8. Contact",
+                section8Text: "Questions about these terms? Contact us at: legal@travelpaycomparison.com"
+            },
+            'zh-cn': {
+                pageTitle: "服务条款",
+                lastUpdated: "最后更新：2026年4月10日",
+                disclaimer: "⚠️ 此工具仅提供估算。实际费用和汇率可能有所不同。请务必与您的支付提供商核实。",
+                section1Title: "1. 服务说明",
+                section1Text: "TravelPayComparison是日本支付方式的免费比较计算器。我们根据典型市场费率提供估算费用。这仅是信息工具，不是财务建议。",
+                section2Title: "2. 无保证",
+                section2Text: "我们不保证所提供信息的准确性、完整性或可靠性。汇率和费用经常变化。在做出财务决策之前，您应始终与支付提供商核实当前费率。",
+                section3Title: "3. 联盟关系",
+                section3Text: "我们从Wise、Revolut、Klook、Booking.com和其他服务的联盟链接中赚取佣金。这不影响您支付的价格。我们只推荐我们认为对旅行者有价值的服务。",
+                section4Title: "4. 无责任",
+                section4Text: "我们不对因使用此计算器或根据所提供信息做出的决定而产生的任何损失、损害或费用负责。使用此工具的风险由您自行承担。",
+                section5Title: "5. 第三方服务",
+                section5Text: "提供第三方网站链接是为了您的方便。我们不对其内容、服务或隐私惯例负责。在使用其服务之前，请查看其条款和政策。",
+                section6Title: "6. 服务变更",
+                section6Text: "我们保留随时修改、暂停或终止此服务的权利，恕不另行通知。我们也可能随时更新这些条款。继续使用即表示接受更新的条款。",
+                section7Title: "7. 用户行为",
+                section7Text: "您同意不滥用此服务、不尝试访问受限区域或干扰其运营。我们保留因违规而阻止访问的权利。",
+                section8Title: "8. 联系方式",
+                section8Text: "对这些条款有疑问？请联系我们：legal@travelpaycomparison.com"
+            },
+            ko: {
+                pageTitle: "서비스 약관",
+                lastUpdated: "최종 업데이트: 2026년 4월 10일",
+                disclaimer: "⚠️ 이 도구는 추정치만 제공합니다. 실제 수수료와 환율은 다를 수 있습니다. 항상 결제 제공업체에 확인하십시오.",
+                section1Title: "1. 서비스 설명",
+                section1Text: "TravelPayComparison은 일본 결제 수단의 무료 비교 계산기입니다. 일반적인 시장 요율을 기반으로 예상 비용을 제공합니다. 이것은 정보 도구일 뿐 재정 조언이 아닙니다.",
+                section2Title: "2. 보증 없음",
+                section2Text: "제공된 정보의 정확성, 완전성 또는 신뢰성에 대해 보증하지 않습니다. 환율과 수수료는 자주 변경됩니다. 재정 결정을 내리기 전에 항상 결제 제공업체에 현재 요율을 확인해야 합니다.",
+                section3Title: "3. 제휴 관계",
+                section3Text: "Wise, Revolut, Klook, Booking.com 및 기타 서비스에 대한 제휴 링크에서 수수료를 받습니다. 이것은 귀하가 지불하는 가격에 영향을 미치지 않습니다. 여행자에게 가치를 제공한다고 믿는 서비스만 추천합니다.",
+                section4Title: "4. 책임 없음",
+                section4Text: "이 계산기 사용 또는 제공된 정보를 기반으로 한 결정으로 인해 발생하는 손실, 손해 또는 비용에 대해 책임지지 않습니다. 이 도구 사용에 따른 위험은 귀하의 책임입니다.",
+                section5Title: "5. 제3자 서비스",
+                section5Text: "제3자 웹사이트 링크는 귀하의 편의를 위해 제공됩니다. 해당 콘텐츠, 서비스 또는 개인정보 보호 관행에 대해 책임지지 않습니다. 서비스를 사용하기 전에 약관 및 정책을 검토하십시오.",
+                section6Title: "6. 서비스 변경",
+                section6Text: "통지 없이 언제든지 이 서비스를 수정, 중단 또는 종료할 권리를 보유합니다. 또한 언제든지 이 약관을 업데이트할 수 있습니다. 계속 사용하면 업데이트된 약관에 동의하는 것으로 간주됩니다.",
+                section7Title: "7. 사용자 행동",
+                section7Text: "이 서비스를 오용하거나 제한된 영역에 액세스하려고 시도하거나 운영을 방해하지 않기로 동의합니다. 위반 시 액세스를 차단할 권리를 보유합니다.",
+                section8Title: "8. 연락처",
+                section8Text: "이 약관에 대한 질문이 있으십니까? 문의하십시오: legal@travelpaycomparison.com"
+            },
+            th: {
+                pageTitle: "ข้อกำหนดการให้บริการ",
+                lastUpdated: "อัปเดตล่าสุด: 10 เมษายน 2026",
+                disclaimer: "⚠️ เครื่องมือนี้ให้เฉพาะการประมาณการ ค่าธรรมเนียมและอัตราแลกเปลี่ยนจริงอาจแตกต่างกัน โปรดตรวจสอบกับผู้ให้บริการการชำระเงินของคุณเสมอ",
+                section1Title: "1. คำอธิบายบริการ",
+                section1Text: "TravelPayComparison เป็นเครื่องคิดเลขเปรียบเทียบฟรีสำหรับวิธีการชำระเงินในญี่ปุ่น เราให้ต้นทุนโดยประมาณตามอัตราตลาดทั่วไป นี่เป็นเพียงเครื่องมือให้ข้อมูลไม่ใช่คำแนะนำทางการเงิน",
+                section2Title: "2. ไม่มีการรับประกัน",
+                section2Text: "เราไม่รับประกันความถูกต้อง ความสมบูรณ์ หรือความน่าเชื่อถือของข้อมูลที่ให้ไว้ อัตราแลกเปลี่ยนและค่าธรรมเนียมเปลี่ยนแปลงบ่อยครั้ง คุณควรตรวจสอบอัตราปัจจุบันกับผู้ให้บริการการชำระเงินของคุณเสมอก่อนตัดสินใจทางการเงิน",
+                section3Title: "3. ความสัมพันธ์พันธมิตร",
+                section3Text: "เราได้รับค่าคอมมิชชันจากลิงก์พันธมิตรไปยัง Wise, Revolut, Klook, Booking.com และบริการอื่นๆ สิ่งนี้ไม่ส่งผลกระทบต่อราคาที่คุณจ่าย เราแนะนำเฉพาะบริการที่เราเชื่อว่าให้คุณค่าแก่นักท่องเที่ยว",
+                section4Title: "4. ไม่มีความรับผิด",
+                section4Text: "เราไม่รับผิดชอบต่อความสูญเสีย ความเสียหาย หรือค่าใช้จ่ายใดๆ ที่เกิดจากการใช้เครื่องคิดเลขนี้หรือการตัดสินใจที่ทำตามข้อมูลที่ให้ไว้ ใช้เครื่องมือนี้โดยความเสี่ยงของคุณเอง",
+                section5Title: "5. บริการของบุคคลที่สาม",
+                section5Text: "ลิงก์ไปยังเว็บไซต์ของบุคคลที่สามมีให้เพื่อความสะดวกของคุณ เราไม่รับผิดชอบต่อเนื้อหา บริการ หรือแนวปฏิบัติด้านความเป็นส่วนตัวของพวกเขา ตรวจสอบข้อกำหนดและนโยบายของพวกเขาก่อนใช้บริการของพวกเขา",
+                section6Title: "6. การเปลี่ยนแปลงบริการ",
+                section6Text: "เราขอสงวนสิทธิ์ในการแก้ไข ระงับ หรือหยุดบริการนี้ได้ตลอดเวลาโดยไม่ต้องแจ้งให้ทราบล่วงหน้า เราอาจอัปเดตข้อกำหนดเหล่านี้ได้ตลอดเวลา การใช้งานต่อไปถือว่ายอมรับข้อกำหนดที่อัปเดต",
+                section7Title: "7. พฤติกรรมผู้ใช้",
+                section7Text: "คุณตกลงที่จะไม่ใช้บริการนี้ในทางที่ผิด พยายามเข้าถึงพื้นที่ที่ถูกจำกัด หรือรบกวนการทำงาน เราขอสงวนสิทธิ์ในการบล็อกการเข้าถึงสำหรับการละเมิด",
+                section8Title: "8. ติดต่อ",
+                section8Text: "มีคำถามเกี่ยวกับข้อกำหนดเหล่านี้? ติดต่อเราที่: legal@travelpaycomparison.com"
+            },
+            'zh-tw': {
+                pageTitle: "服務條款",
+                lastUpdated: "最後更新：2026年4月10日",
+                disclaimer: "⚠️ 此工具僅提供估算。實際費用和匯率可能有所不同。請務必與您的支付提供商核實。",
+                section1Title: "1. 服務說明",
+                section1Text: "TravelPayComparison是日本支付方式的免費比較計算器。我們根據典型市場費率提供估算費用。這僅是資訊工具，不是財務建議。",
+                section2Title: "2. 無保證",
+                section2Text: "我們不保證所提供資訊的準確性、完整性或可靠性。匯率和費用經常變化。在做出財務決策之前，您應始終與支付提供商核實當前費率。",
+                section3Title: "3. 聯盟關係",
+                section3Text: "我們從Wise、Revolut、Klook、Booking.com和其他服務的聯盟連結中賺取佣金。這不影響您支付的價格。我們只推薦我們認為對旅行者有價值的服務。",
+                section4Title: "4. 無責任",
+                section4Text: "我們不對因使用此計算器或根據所提供資訊做出的決定而產生的任何損失、損害或費用負責。使用此工具的風險由您自行承擔。",
+                section5Title: "5. 第三方服務",
+                section5Text: "提供第三方網站連結是為了您的方便。我們不對其內容、服務或隱私慣例負責。在使用其服務之前，請查看其條款和政策。",
+                section6Title: "6. 服務變更",
+                section6Text: "我們保留隨時修改、暫停或終止此服務的權利，恕不另行通知。我們也可能隨時更新這些條款。繼續使用即表示接受更新的條款。",
+                section7Title: "7. 使用者行為",
+                section7Text: "您同意不濫用此服務、不嘗試存取受限區域或干擾其運營。我們保留因違規而阻止存取的權利。",
+                section8Title: "8. 聯絡方式",
+                section8Text: "對這些條款有疑問？請聯絡我們：legal@travelpaycomparison.com"
+            }
+        };
+
+        let currentLanguage = 'en';
+
+        function setLanguage(lang) {
+            currentLanguage = lang;
+            updateContent();
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function updateContent() {
+            const t = translations[currentLanguage];
+            
+            document.getElementById('pageTitle').textContent = t.pageTitle;
+            document.getElementById('lastUpdated').textContent = t.lastUpdated;
+            document.getElementById('disclaimer').textContent = t.disclaimer;
+            document.getElementById('section1Title').textContent = t.section1Title;
+            document.getElementById('section1Text').textContent = t.section1Text;
+            document.getElementById('section2Title').textContent = t.section2Title;
+            document.getElementById('section2Text').textContent = t.section2Text;
+            document.getElementById('section3Title').textContent = t.section3Title;
+            document.getElementById('section3Text').textContent = t.section3Text;
+            document.getElementById('section4Title').textContent = t.section4Title;
+            document.getElementById('section4Text').textContent = t.section4Text;
+            document.getElementById('section5Title').textContent = t.section5Title;
+            document.getElementById('section5Text').textContent = t.section5Text;
+            document.getElementById('section6Title').textContent = t.section6Title;
+            document.getElementById('section6Text').textContent = t.section6Text;
+            document.getElementById('section7Title').textContent = t.section7Title;
+            document.getElementById('section7Text').textContent = t.section7Text;
+            document.getElementById('section8Title').textContent = t.section8Title;
+            document.getElementById('section8Text').textContent = t.section8Text;
+        }
+    </script>
+</body>
+</html>
