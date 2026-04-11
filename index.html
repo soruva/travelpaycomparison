@@ -269,6 +269,10 @@
             margin-top: 40px;
         }
 
+        .results-preview {
+            text-align: center;
+        }
+
         .best-badge {
             display: inline-block;
             background: linear-gradient(135deg, #10b981 0%, #059669 100%);
@@ -295,6 +299,15 @@
             align-items: center;
             gap: 16px;
             margin-bottom: 24px;
+            justify-content: center;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            justify-content: center;
         }
 
         .method-icon {
@@ -317,11 +330,57 @@
             margin: 24px 0;
         }
 
+        .rate-display {
+            font-size: 56px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 20px 0 10px;
+            line-height: 1.2;
+        }
+
         .savings {
             background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
             padding: 20px;
             border-radius: 16px;
-            margin: 24px 0;
+            margin: 20px 0 30px;
+        }
+
+        #savingsText {
+            font-size: 28px;
+            font-weight: 800;
+            color: #059669;
+        }
+
+        .best-label {
+            display: inline-block;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+        }
+
+        .savings {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            padding: 24px;
+            border-radius: 16px;
+            margin: 32px auto;
+            max-width: 500px;
+            border: 2px solid #d1fae5;
+        }
+
+        #savingsText {
+            font-size: 24px;
+            font-weight: 900;
+            color: #059669;
         }
 
         .savings-amount {
@@ -337,6 +396,17 @@
             font-weight: 500;
         }
 
+        .rate-display {
+            font-size: 56px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 24px 0;
+            line-height: 1;
+        }
+
         .detail-row {
             display: flex;
             justify-content: space-between;
@@ -345,19 +415,73 @@
             font-size: 15px;
         }
 
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-top: 1px solid #e5e7eb;
+            font-size: 16px;
+            max-width: 500px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .detail-item:first-child {
+            border-top: none;
+            padding-top: 24px;
+        }
+
         .detail-row:first-child {
             border-top: none;
             padding-top: 0;
         }
 
-        .detail-label {
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 0;
+            border-top: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+
+        .detail-item:first-child {
+            border-top: none;
+            padding-top: 20px;
+        }
+
+        .detail-item span:first-child {
             color: #6b7280;
             font-weight: 500;
+            font-size: 15px;
+        }
+
+        .detail-item span:last-child {
+            color: #1a1a1a;
+            font-weight: 700;
+            font-size: 17px;
+        }
+
+        .detail-label {
+            color: #6b7280;
+            font-weight: 600;
+            font-size: 15px;
         }
 
         .detail-value {
             color: #1a1a1a;
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        #detailFeeLabel, #detailRateLabel, #detailAvailLabel {
+            color: #6b7280;
             font-weight: 600;
+        }
+
+        #detailFee, #detailRate, #detailAvail {
+            color: #1a1a1a;
+            font-weight: 700;
         }
 
         .affiliate-btn, .cta-btn {
@@ -375,9 +499,53 @@
             margin-top: 20px;
         }
 
+        .cta-button {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 24px auto;
+            padding: 18px 32px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 17px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(16, 185, 129, 0.4);
+        }
+
         .affiliate-btn:hover, .cta-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .cta-button {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 24px;
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
         }
 
         .other-options {
@@ -622,15 +790,15 @@
                     </div>
 
                     <div class="detail-item">
-                        <span id="detailFeeLabel">Fee</span>
+                        <span id="detailFeeLabel">💵 Fee</span>
                         <span id="detailFee">$1.89 (3.0%)</span>
                     </div>
                     <div class="detail-item">
-                        <span id="detailRateLabel">Exchange Rate</span>
+                        <span id="detailRateLabel">💱 Exchange Rate</span>
                         <span id="detailRate">1 USD = ¥160.00</span>
                     </div>
                     <div class="detail-item">
-                        <span id="detailAvailLabel">Available</span>
+                        <span id="detailAvailLabel">🏪 Available</span>
                         <span id="detailAvail">Most stores</span>
                     </div>
 
@@ -642,28 +810,43 @@
                         </div>
 
                         <!-- Pro Tip Box -->
-                        <div style="color: #fff; background: rgba(0,0,0,0.1); padding: 10px; border-radius: 6px; margin: 12px 0;">
-                            <strong>💡 Pro Tip:</strong> Always choose <strong>"Pay in JPY"</strong> at terminals to avoid high conversion fees.
+                        <div style="background: rgba(255, 193, 7, 0.15); padding: 14px; border-radius: 8px; margin: 12px 0; border-left: 4px solid #ffc107;">
+                            <strong style="color: #856404;">💡 Pro Tip:</strong> <span style="color: #856404;">Always choose <strong>"Pay in JPY"</strong> at terminals to avoid high conversion fees.</span>
                         </div>
 
                         <!-- PayPay QR Apps Box -->
-                        <div style="background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%); padding: 12px; border-radius: 8px; margin-bottom: 12px; border: 1px solid rgba(255,255,255,0.2);">
-                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                                <span style="font-size: 20px;">📱</span>
-                                <strong style="font-size: 13px; color: #fff;">Use Your Home App at PayPay Merchants!</strong>
+                        <div style="background: rgba(102, 126, 234, 0.08); padding: 18px; border-radius: 12px; margin-bottom: 12px; border: 1px solid rgba(102, 126, 234, 0.2);">
+                            <div style="text-align: center; margin-bottom: 16px;">
+                                <span style="font-size: 24px;">📱</span>
+                                <div style="font-size: 15px; font-weight: 700; color: #1a1a1a; margin-top: 8px;">Use Your Home QR Payment Apps!</div>
+                                <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">Available at PayPay merchants across Japan</div>
                             </div>
-                            <div style="font-size: 11px; line-height: 1.6; color: rgba(255,255,255,0.9);">
-                                <div style="margin-bottom: 4px;">
-                                    <span style="opacity: 0.7;">🇰🇷 Korea:</span> <strong>KakaoPay, NaverPay</strong>
-                                </div>
-                                <div style="margin-bottom: 4px;">
-                                    <span style="opacity: 0.7;">🇹🇭 Thailand:</span> <strong>TrueMoney</strong>
-                                </div>
-                                <div style="margin-bottom: 4px;">
-                                    <span style="opacity: 0.7;">🇹🇼 Taiwan:</span> <strong>JKOPAY, PXPay+</strong>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px;">
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #667eea; margin-bottom: 8px;">🇰🇷 Korea</div>
+                                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                                        <span style="background: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #1a1a1a; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">KakaoPay</span>
+                                        <span style="background: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #1a1a1a; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">NaverPay</span>
+                                    </div>
                                 </div>
                                 <div>
-                                    <span style="opacity: 0.7;">🇭🇰 Hong Kong:</span> <strong>AlipayHK</strong>
+                                    <div style="font-size: 14px; font-weight: 700; color: #667eea; margin-bottom: 8px;">🇹🇭 Thailand</div>
+                                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                                        <span style="background: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #1a1a1a; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">TrueMoney</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #667eea; margin-bottom: 8px;">🇹🇼 Taiwan</div>
+                                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                                        <span style="background: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #1a1a1a; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">JKOPAY</span>
+                                        <span style="background: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #1a1a1a; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">PXPay+</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 14px; font-weight: 700; color: #667eea; margin-bottom: 8px;">🇭🇰 Hong Kong</div>
+                                    <div style="display: flex; flex-direction: column; gap: 6px;">
+                                        <span style="background: white; padding: 8px 12px; border-radius: 8px; font-size: 13px; color: #1a1a1a; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">AlipayHK</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -998,9 +1181,9 @@
                 paymentSuica: "🎫 Suica/IC Card",
                 calculateBtn: "Compare Now →",
                 bestLabel: "🏆 BEST OPTION",
-                detailFeeLabel: "Fee",
-                detailRateLabel: "Exchange Rate",
-                detailAvailLabel: "Available",
+                detailFeeLabel: "💵 Fee",
+                detailRateLabel: "💱 Exchange Rate",
+                detailAvailLabel: "🏪 Available",
                 bestCTA: "Get Details →",
                 affiliateNote: "We recommend services that offer the best value. Some links may earn us commission.",
                 otherOptionsLabel: "Other Payment Methods",
@@ -1071,9 +1254,9 @@
                 paymentSuica: "🎫 Suica/IC卡",
                 calculateBtn: "立即比较 →",
                 bestLabel: "🏆 最佳选项",
-                detailFeeLabel: "手续费",
-                detailRateLabel: "汇率",
-                detailAvailLabel: "可用地点",
+                detailFeeLabel: "💵 手续费",
+                detailRateLabel: "💱 汇率",
+                detailAvailLabel: "🏪 可用地点",
                 bestCTA: "查看详情 →",
                 affiliateNote: "我们推荐能提供最佳价值的服务。某些链接可能会使我们获得佣金。",
                 otherOptionsLabel: "其他支付方式",
@@ -1144,9 +1327,9 @@
                 paymentSuica: "🎫 Suica/IC카드",
                 calculateBtn: "지금 비교 →",
                 bestLabel: "🏆 최고의 옵션",
-                detailFeeLabel: "수수료",
-                detailRateLabel: "환율",
-                detailAvailLabel: "사용 가능",
+                detailFeeLabel: "💵 수수료",
+                detailRateLabel: "💱 환율",
+                detailAvailLabel: "🏪 사용 가능",
                 bestCTA: "세부정보 보기 →",
                 affiliateNote: "최고의 가치를 제공하는 서비스를 추천합니다. 일부 링크는 수수료를 얻을 수 있습니다.",
                 otherOptionsLabel: "다른 결제 방법",
@@ -1217,9 +1400,9 @@
                 paymentSuica: "🎫 Suica/IC Card",
                 calculateBtn: "เปรียบเทียบตอนนี้ →",
                 bestLabel: "🏆 ตัวเลือกที่ดีที่สุด",
-                detailFeeLabel: "ค่าธรรมเนียม",
-                detailRateLabel: "อัตราแลกเปลี่ยน",
-                detailAvailLabel: "พร้อมใช้",
+                detailFeeLabel: "💵 ค่าธรรมเนียม",
+                detailRateLabel: "💱 อัตราแลกเปลี่ยน",
+                detailAvailLabel: "🏪 พร้อมใช้",
                 bestCTA: "ดูรายละเอียด →",
                 affiliateNote: "เราแนะนำบริการที่มีค่าดีที่สุด ลิงก์บางลิงก์อาจได้รับค่าคอมมิชชั่นจากเรา",
                 otherOptionsLabel: "วิธีการชำระเงินอื่นๆ",
@@ -1290,9 +1473,9 @@
                 paymentSuica: "🎫 Suica/IC卡",
                 calculateBtn: "立即比較 →",
                 bestLabel: "🏆 最佳選項",
-                detailFeeLabel: "費用",
-                detailRateLabel: "匯率",
-                detailAvailLabel: "可用",
+                detailFeeLabel: "💵 費用",
+                detailRateLabel: "💱 匯率",
+                detailAvailLabel: "🏪 可用",
                 bestCTA: "查看詳情 →",
                 affiliateNote: "我們推薦能提供最佳價值的服務。某些鏈接可能會讓我們獲得佣金。",
                 otherOptionsLabel: "其他付款方式",
