@@ -49,7 +49,7 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: linear-gradient(180deg, #f0f4ff 0%, #fef3f8 50%, #f5f0ff 100%);
+            background: linear-gradient(180deg, #e0ebff 0%, #fde1f0 50%, #ebe0ff 100%);
             min-height: 100vh;
             color: #1a1a1a;
         }
@@ -109,7 +109,7 @@
         }
 
         .hero {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 80px auto 60px;
             padding: 0 24px;
             text-align: center;
@@ -136,10 +136,17 @@
             color: #6b7280;
             margin-bottom: 40px;
             font-weight: 400;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .desktop-only {
+            display: inline;
         }
 
         .main-content {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 0 24px 60px;
         }
@@ -150,6 +157,7 @@
             padding: 48px;
             margin-bottom: 40px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+            border: 1px solid #e5e7eb;
         }
 
         h2 {
@@ -500,6 +508,10 @@
         }
 
         @media (max-width: 768px) {
+            .desktop-only {
+                display: none;
+            }
+
             .hero h1 {
                 font-size: 36px;
             }
@@ -550,7 +562,7 @@
                 Compare Payment Methods.<br>
                 <span class="highlight">Save Money in Japan.</span>
             </h1>
-            <p id="subtitle">Find the best exchange rates and payment options for your Japan trip. Free calculator in 5 languages.</p>
+            <p id="subtitle">Find the best exchange rates and payment options for your Japan trip.<br class="desktop-only"> Free calculator in 5 languages.</p>
         </div>
 
         <main class="main-content">
@@ -744,9 +756,62 @@
                         <h3 style="font-size: 18px; font-weight: 800; color: #856404; margin-bottom: 8px;" id="emergencyTitle">Emergency</h3>
                         <p style="font-size: 14px; color: #856404; line-height: 1.6;" id="emergencyDesc">
                             Police: 110 | Ambulance: 119<br>
-                            English: <a href="https://jhelp.com/en/" target="_blank" rel="noopener noreferrer" style="color: #856404; text-decoration: underline; font-weight: 700;">Japan Helpline</a>
+                            English: <a href="https://jhelp.com/en/jhelpline.html" target="_blank" rel="noopener noreferrer" style="color: #856404; text-decoration: underline; font-weight: 700;">Japan Helpline</a>
                         </p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Essential Tools Section -->
+            <div class="card">
+                <h2 style="font-size: 28px; font-weight: 900; color: #333; text-align: center; margin-bottom: 30px;" id="usefulLinksTitle">
+                    🧭 Essential Tools for Travelers
+                </h2>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <!-- Google Maps -->
+                    <a href="https://www.google.com/maps?hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <div style="background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px; transition: all 0.3s; cursor: pointer; height: 100%;">
+                            <div style="font-size: 32px; margin-bottom: 12px;">🗺️</div>
+                            <h3 style="font-size: 18px; font-weight: 800; color: #333; margin-bottom: 8px;" id="googleMapsTitle">Google Maps</h3>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6;" id="googleMapsDesc">
+                                Search with filters: "accepts credit cards" or "English menu"
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Hyperdia -->
+                    <a href="https://www.hyperdia.com/en/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <div style="background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px; transition: all 0.3s; cursor: pointer; height: 100%;">
+                            <div style="font-size: 32px; margin-bottom: 12px;">🚇</div>
+                            <h3 style="font-size: 18px; font-weight: 800; color: #333; margin-bottom: 8px;" id="hyperdiaTitle">Train Route Planner</h3>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6;" id="hyperdiaDesc">
+                                Hyperdia - English route search for all trains in Japan
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Japan Tourism -->
+                    <a href="https://www.japan.travel/en/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <div style="background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px; transition: all 0.3s; cursor: pointer; height: 100%;">
+                            <div style="font-size: 32px; margin-bottom: 12px;">🏛️</div>
+                            <h3 style="font-size: 18px; font-weight: 800; color: #333; margin-bottom: 8px;" id="jntoTitle">Official Travel Guide</h3>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6;" id="jntoDesc">
+                                Japan National Tourism - Destinations, events & tips
+                            </p>
+                        </div>
+                    </a>
+
+                    <!-- Welcome Suica -->
+                    <a href="https://www.jreast.co.jp/multi/pass/welcomesuica.html" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+                        <div style="background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 20px; transition: all 0.3s; cursor: pointer; height: 100%;">
+                            <div style="font-size: 32px; margin-bottom: 12px;">🎫</div>
+                            <h3 style="font-size: 18px; font-weight: 800; color: #333; margin-bottom: 8px;" id="suicaGuideTitle">Welcome Suica Guide</h3>
+                            <p style="font-size: 14px; color: #666; line-height: 1.6;" id="suicaGuideDesc">
+                                How to buy and use Suica IC card for trains & stores
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
 
@@ -914,11 +979,11 @@
           }
         }
         </script>
-
-        <footer>
-            <p>© 2024 TravelPayComparison | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a></p>
-        </footer>
     </div>
+
+    <footer>
+        <p>© 2024 TravelPayComparison | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="about.html">About</a></p>
+    </footer>
 
     <script>
         const translations = {
@@ -978,6 +1043,15 @@
                 airaloDesc: "Instant activation - No physical SIM card needed",
                 vpnTitle: "Secure VPN",
                 vpnDesc: "Access your home banking & streaming services securely",
+                usefulLinksTitle: "🧭 Essential Tools for Travelers",
+                googleMapsTitle: "Google Maps",
+                googleMapsDesc: "Search with filters: \"accepts credit cards\" or \"English menu\"",
+                hyperdiaTitle: "Train Route Planner",
+                hyperdiaDesc: "Hyperdia - English route search for all trains in Japan",
+                jntoTitle: "Official Travel Guide",
+                jntoDesc: "Japan National Tourism - Destinations, events & tips",
+                suicaGuideTitle: "Welcome Suica Guide",
+                suicaGuideDesc: "How to buy and use Suica IC card for trains & stores",
                 insuranceTitle: "🛡️ Travel Insurance",
                 insuranceSubtitle: "Protect your trip with comprehensive coverage",
                 worldNomadsTitle: "World Nomads Travel Insurance",
@@ -1042,6 +1116,15 @@
                 airaloDesc: "即时激活 - 无需实体SIM卡",
                 vpnTitle: "安全VPN",
                 vpnDesc: "安全访问您的本国银行和流媒体服务",
+                usefulLinksTitle: "🧭 旅行必备工具",
+                googleMapsTitle: "谷歌地图",
+                googleMapsDesc: "搜索筛选：\"接受信用卡\"或\"英文菜单\"",
+                hyperdiaTitle: "列车路线规划",
+                hyperdiaDesc: "Hyperdia - 日本全国列车英文查询",
+                jntoTitle: "官方旅游指南",
+                jntoDesc: "日本国家旅游局 - 目的地、活动和提示",
+                suicaGuideTitle: "Welcome Suica指南",
+                suicaGuideDesc: "如何购买和使用Suica IC卡乘车购物",
                 insuranceTitle: "🛡️ 旅行保险",
                 insuranceSubtitle: "为您的旅行提供全面保障",
                 worldNomadsTitle: "World Nomads旅行保险",
@@ -1106,6 +1189,15 @@
                 airaloDesc: "즉시 활성화 - 실물 SIM 카드 불필요",
                 vpnTitle: "보안 VPN",
                 vpnDesc: "본국 뱅킹 및 스트리밍 서비스 안전하게 액세스",
+                usefulLinksTitle: "🧭 여행 필수 도구",
+                googleMapsTitle: "구글 지도",
+                googleMapsDesc: "필터 검색: \"신용카드 가능\" 또는 \"영어 메뉴\"",
+                hyperdiaTitle: "기차 경로 검색",
+                hyperdiaDesc: "Hyperdia - 일본 전국 기차 영어 검색",
+                jntoTitle: "공식 여행 가이드",
+                jntoDesc: "일본 국가관광국 - 목적지, 이벤트 및 팁",
+                suicaGuideTitle: "Welcome Suica 가이드",
+                suicaGuideDesc: "Suica IC카드 구매 및 사용법 (기차·상점)",
                 insuranceTitle: "🛡️ 여행자 보험",
                 insuranceSubtitle: "종합 보장으로 여행 보호",
                 worldNomadsTitle: "World Nomads 여행자 보험",
@@ -1170,6 +1262,15 @@
                 airaloDesc: "เปิดใช้งานทันที - ไม่ต้องใช้ซิมการ์ดจริง",
                 vpnTitle: "VPN ปลอดภัย",
                 vpnDesc: "เข้าถึงบริการธนาคารและสตรีมมิ่งในประเทศตนได้อย่างปลอดภัย",
+                usefulLinksTitle: "🧭 เครื่องมือสำคัญสำหรับนักท่องเที่ยว",
+                googleMapsTitle: "Google Maps",
+                googleMapsDesc: "ค้นหาด้วยตัวกรอง: \"รับบัตรเครดิต\" หรือ \"เมนูภาษาอังกฤษ\"",
+                hyperdiaTitle: "วางแผนเส้นทางรถไฟ",
+                hyperdiaDesc: "Hyperdia - ค้นหาเส้นทางรถไฟทั่วญี่ปุ่นภาษาอังกฤษ",
+                jntoTitle: "คู่มือท่องเที่ยวอย่างเป็นทางการ",
+                jntoDesc: "องค์การท่องเที่ยวญี่ปุ่น - จุดหมาย กิจกรรม และเคล็ดลับ",
+                suicaGuideTitle: "คู่มือ Welcome Suica",
+                suicaGuideDesc: "วิธีซื้อและใช้บัตร Suica IC สำหรับรถไฟและร้านค้า",
                 insuranceTitle: "🛡️ ประกันการเดินทาง",
                 insuranceSubtitle: "ปกป้องการเดินทางของคุณด้วยความคุ้มครองที่ครอบคลุม",
                 worldNomadsTitle: "ประกันการเดินทาง World Nomads",
@@ -1234,6 +1335,15 @@
                 airaloDesc: "即時激活 - 無需實體SIM卡",
                 vpnTitle: "安全VPN",
                 vpnDesc: "安全訪問您的本國銀行和串流服務",
+                usefulLinksTitle: "🧭 旅行必備工具",
+                googleMapsTitle: "谷歌地圖",
+                googleMapsDesc: "搜尋篩選：\"接受信用卡\"或\"英文菜單\"",
+                hyperdiaTitle: "列車路線規劃",
+                hyperdiaDesc: "Hyperdia - 日本全國列車英文查詢",
+                jntoTitle: "官方旅遊指南",
+                jntoDesc: "日本國家旅遊局 - 目的地、活動和提示",
+                suicaGuideTitle: "Welcome Suica指南",
+                suicaGuideDesc: "如何購買和使用Suica IC卡乘車購物",
                 insuranceTitle: "🛡️ 旅行保險",
                 insuranceSubtitle: "為您的旅行提供全面保障",
                 worldNomadsTitle: "World Nomads旅行保險",
@@ -1387,6 +1497,17 @@
             document.getElementById('airaloDesc').textContent = t.airaloDesc;
             document.getElementById('vpnTitle').textContent = t.vpnTitle;
             document.getElementById('vpnDesc').textContent = t.vpnDesc;
+            
+            // Useful Links translations
+            document.getElementById('usefulLinksTitle').textContent = t.usefulLinksTitle;
+            document.getElementById('googleMapsTitle').textContent = t.googleMapsTitle;
+            document.getElementById('googleMapsDesc').textContent = t.googleMapsDesc;
+            document.getElementById('hyperdiaTitle').textContent = t.hyperdiaTitle;
+            document.getElementById('hyperdiaDesc').textContent = t.hyperdiaDesc;
+            document.getElementById('jntoTitle').textContent = t.jntoTitle;
+            document.getElementById('jntoDesc').textContent = t.jntoDesc;
+            document.getElementById('suicaGuideTitle').textContent = t.suicaGuideTitle;
+            document.getElementById('suicaGuideDesc').textContent = t.suicaGuideDesc;
             
             // Travel Insurance translations
             document.getElementById('insuranceTitle').textContent = t.insuranceTitle;
