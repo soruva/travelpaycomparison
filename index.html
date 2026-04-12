@@ -925,6 +925,23 @@
             width: 300px;
             height: 300px;
         }
+        /* FAQ Styles */
+        .faq-item[open] summary span:last-child {
+            transform: rotate(45deg);
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(16, 185, 129, 0.5);
+            transform: translateX(4px);
+        }
+
+        .faq-item summary {
+            transition: all 0.3s;
+        }
     </style>
 </head>
 <body>
