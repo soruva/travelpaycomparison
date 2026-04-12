@@ -237,6 +237,42 @@
             transform: scale(0.95);
         }
 
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            ...
+        }
+
+        .dark-mode-toggle:hover {
+            transform: scale(1.1) rotate(15deg);
+            ...
+        }
+
+        .dark-mode-toggle:active {
+            transform: scale(0.95);
+        }
+        /* ⬇️⬇️⬇️ ここに追加 ⬇️⬇️⬇️ */
+        .scroll-top-btn {
+            position: fixed;
+            bottom: 96px;
+            right: 24px;
+            ...
+        }
+
+        .scroll-top-btn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top-btn:hover {
+            ...
+        }
+
+        .scroll-top-btn:active {
+            ...
+        }
+
         .hero {
             max-width: 1100px;
             margin: 0 auto;
