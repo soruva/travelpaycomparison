@@ -929,16 +929,25 @@
         .faq-item[open] summary span:last-child {
             transform: rotate(45deg);
         }
-
+        
         .faq-item summary::-webkit-details-marker {
             display: none;
         }
-
-        .faq-item:hover {
-            border-color: rgba(16, 185, 129, 0.5);
-            transform: translateX(4px);
+        
+        .faq-item {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
+        
+        .faq-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.2);
+            border-color: #667eea !important;
+        }
+        
+        .faq-item:hover summary {
+            color: #667eea;
+        }
+        
         .faq-item summary {
             transition: all 0.3s;
         }
