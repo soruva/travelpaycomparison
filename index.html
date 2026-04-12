@@ -2064,7 +2064,12 @@
         function updateLanguage() {
             const t = translations[currentLanguage];
             
-            document.getElementById('title').textContent = t.title;
+            const titleElement = document.getElementById('title');
+            titleElement.textContent = t.title;
+            titleElement.style.background = 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
+            titleElement.style.webkitBackgroundClip = 'text';
+            titleElement.style.webkitTextFillColor = 'transparent';
+            titleElement.style.backgroundClip = 'text';
             document.getElementById('subtitle').textContent = t.subtitle;
             document.getElementById('amountLabel').textContent = t.amountLabel;
             document.getElementById('currencyLabel').textContent = t.currencyLabel;
