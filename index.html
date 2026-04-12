@@ -2365,6 +2365,23 @@
                 }, 100);
             });
         });
+        // FAQ - Close others when one opens
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.addEventListener('toggle', (e) => {
+                    if (item.open) {
+                        // Close all other FAQ items
+                        faqItems.forEach(otherItem => {
+                            if (otherItem !== item && otherItem.open) {
+                                otherItem.open = false;
+                            }
+                        });
+                    }
+                });
+            });
+        });
     </script>
 </body>
 </html>
